@@ -4,6 +4,8 @@ import Opaque from "../Opaque";
 import Wrapper from "../Wrapper";
 import styled from "styled-components";
 import { theme } from "../../styles/theme";
+import { useMove } from "../../contexts/useMove";
+import { IAbout } from "../../type";
 
 const Content = styled.div`
   /* text-align: center; */
@@ -19,20 +21,23 @@ const Content = styled.div`
   }
 `;
 
-const About: FC = () => {
+type AboutProps = {
+  data: IAbout;
+};
+
+const About: FC<AboutProps> = ({ data }) => {
+  const { setMove } = useMove();
+  useEffect(() => {
+    setMove(false);
+  }, []);
+
   return (
     <>
       <Opaque />
       <Wrapper>
         <Content>
-          <h1>안녕하세요. 이종서입니다.</h1>
-          <p>
-            새로운 것을 배우는 것을 좋아합니다.새로운 것을 배우는 것을
-            좋아합니다.새로운 것을 배우는 것을 좋아합니다.새로운 것을 배우는
-            것을 좋아합니다.새로운 것을 배우는 것을 좋아합니다.새로운 것을
-            배우는 것을 좋아합니다.새로운 것을 배우는 것을 좋아합니다.새로운
-            것을 배우는 것을 좋아합니다.새로운 것을 배우는 것을 좋아합니다.
-          </p>
+          <h1>{data.markdownRemark.frontmatter.title}</h1>
+          <p>{data.markdownRemark.excerpt}</p>
         </Content>
       </Wrapper>
     </>

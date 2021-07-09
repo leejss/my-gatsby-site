@@ -1,10 +1,10 @@
 import React from "react";
-import About from "../components/About/About";
+import AboutContainer from "../components/About/AboutContainer";
 
 const AboutPage = () => {
   return (
     <section>
-      <About />
+      <AboutContainer />
     </section>
   );
 };
