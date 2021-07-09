@@ -1,7 +1,12 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://thisisleejss.gatsbyjs.io/",
     title: "leejss",
+    author: {
+      name: "Lee Jongseo",
+      email: "goldemshine@gmail.com",
+      url: "https://leejss.github.io/",
+    },
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -10,9 +15,16 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve(`./src/layouts/index.tsx`),
+      },
+    },
+    {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
+        background_color: "#255799",
       },
     },
     "gatsby-transformer-remark",
