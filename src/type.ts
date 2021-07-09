@@ -1,3 +1,5 @@
+import { FluidObject } from "gatsby-image";
+
 export interface IAbout {
   markdownRemark: {
     excerpt: string;
@@ -11,6 +13,17 @@ export interface IWork {
   node: {
     frontmatter: {
       title: string;
+      keyword: string;
+      repo: string;
+      thumbnail: {
+        childImageSharp: {
+          fluid: FluidObject;
+        };
+      };
+    };
+    id: string;
+    internal: {
+      content: string;
     };
   };
 }

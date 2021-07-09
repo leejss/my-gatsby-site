@@ -3,7 +3,6 @@ import type { FC } from "react";
 import Works from "./Works";
 import { useMove } from "../../contexts/useMove";
 import { graphql, useStaticQuery } from "gatsby";
-import Img from "gatsby-image";
 import { IWorks } from "../../type";
 
 // const workList: Work[] = [
@@ -48,7 +47,20 @@ const WorksContainer: FC = () => {
           node {
             frontmatter {
               title
+              keyword
+              repo
+              thumbnail {
+                childImageSharp {
+                  fluid(maxWidth: 2000, maxHeight: 1000) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
+            internal {
+              content
+            }
+            id
           }
         }
       }

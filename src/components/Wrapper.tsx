@@ -24,6 +24,7 @@ const Wrapper = styled.section<WrapperProps>`
   align-items: center;
   padding-bottom: 1%;
   z-index: 1;
+  /* background: red; */
 `;
 
 export default Wrapper;

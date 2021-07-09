@@ -9,7 +9,7 @@ const MenuWrapper = styled.nav`
   bottom: 6%;
   left: 3%;
   /* transform: translateY(-50%); */
-  width: 100%;
+  width: 10%;
   display: flex;
   align-items: flex-end;
   padding: ${theme.spaces.p200};
@@ -31,7 +31,7 @@ const NavItem = styled.li`
 `;
 
 const StyledNavlink = styled(Link)`
-  font-size: ${(props) => props.theme.fontSizes.medium};
+  font-size: ${(props) => props.theme.fontSizes.regular};
   font-weight: ${(props) => props.theme.fontWeights.regular};
 
   &:hover {
