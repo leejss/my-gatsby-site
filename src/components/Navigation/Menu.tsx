@@ -67,7 +67,9 @@ const Menu: FC = () => {
           </NavItem>
         ))}
         <NavItem>
-          <StyledAnchor href="https://leejss.github.io/">POSTS</StyledAnchor>
+          <StyledAnchor href="https://leejss.github.io/" target="_blank">
+            POSTS
+          </StyledAnchor>
         </NavItem>
       </Nav>
     </MenuWrapper>
