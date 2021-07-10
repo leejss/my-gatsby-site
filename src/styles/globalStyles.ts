@@ -112,6 +112,11 @@ a {
   font-weight: ${theme.fontWeights.bold};
   color: ${theme.colors.lightest};
 }
+
+a:hover {
+  color: #47eb5d;
+}
+
 button:focus {
   outline:0;
 }
