@@ -32,7 +32,7 @@ const NavItem = styled.li`
 
 const StyledNavlink = styled(Link)`
   font-size: ${(props) => props.theme.fontSizes.regular};
-  font-weight: ${(props) => props.theme.fontWeights.regular};
+  font-weight: ${(props) => props.theme.fontWeights.thin};
 
   &:hover {
     color: ${(props) => props.theme.colors.lightest};
@@ -42,7 +42,7 @@ const StyledNavlink = styled(Link)`
 
 const StyledAnchor = styled.a`
   font-size: ${(props) => props.theme.fontSizes.medium};
-  font-weight: ${(props) => props.theme.fontWeights.regular};
+  font-weight: ${(props) => props.theme.fontWeights.thin};
 
   &:hover {
     color: ${(props) => props.theme.colors.lightest};

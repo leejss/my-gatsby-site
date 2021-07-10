@@ -14,17 +14,28 @@ const TitleWrapper = styled.header`
   right: 0;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 `;
 
-const TitleHeader = styled.h1`
+const TitleHead = styled.h1`
   font-size: ${theme.fontSizes.mediumLarge};
   margin-right: 3%;
 `;
+
+const TitleHeadSub = styled.h2`
+  text-align: start;
+  font-size: ${theme.fontSizes.normal};
+  margin: 0;
+  margin-right: 3%;
+`;
+
 const Title: FC<TitleProps> = ({ title }) => {
   return (
     <TitleWrapper>
-      <TitleHeader>{title}</TitleHeader>
+      <TitleHead>{title}</TitleHead>
+      <TitleHeadSub>since 2020.02</TitleHeadSub>
     </TitleWrapper>
   );
 };

@@ -62,5 +62,13 @@ module.exports = {
       },
       __key: "works",
     },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "contact",
+        path: `${__dirname}/src/contents/contact`,
+      },
+      __key: "contact",
+    },
   ],
 };

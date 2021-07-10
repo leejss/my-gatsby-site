@@ -5,6 +5,7 @@ type WrapperProps = {
   midlleHeight?: boolean;
   fullWidth?: boolean;
   middleWidth?: boolean;
+  opaque?: boolean;
 };
 
 const Wrapper = styled.section<WrapperProps>`
@@ -24,7 +25,7 @@ const Wrapper = styled.section<WrapperProps>`
   align-items: center;
   padding-bottom: 1%;
   z-index: 1;
-  /* background: red; */
+  background: ${(props) => props.opaque && `rgba(0,0,0,0.3)`};
 `;
 
 export default Wrapper;

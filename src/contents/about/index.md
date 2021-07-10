@@ -1,5 +1,5 @@
 ---
-id: "About"
+category: "about"
 title: "안녕하세요. 이종서입니다."
 ---
 

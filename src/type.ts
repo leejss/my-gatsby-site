@@ -1,5 +1,7 @@
 import { FluidObject } from "gatsby-image";
 
+type URL = string;
+
 export interface IAbout {
   markdownRemark: {
     excerpt: string;
@@ -31,5 +33,15 @@ export interface IWork {
 export interface IWorks {
   allMarkdownRemark: {
     edges: IWork[];
+  };
+}
+
+export interface IContactInfo {
+  markdownRemark: {
+    frontmatter: {
+      github: URL;
+      naver: URL;
+      gmail: URL;
+    };
   };
 }

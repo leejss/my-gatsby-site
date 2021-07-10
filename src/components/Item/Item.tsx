@@ -37,7 +37,7 @@ const ItemContent = styled.p`
 `;
 
 const ItemLink = styled.a`
-  font-size: ${theme.fontSizes.mediumLarge};
+  font-size: ${theme.fontSizes.normal};
   &:hover {
     color: #47eb5d;
   }
