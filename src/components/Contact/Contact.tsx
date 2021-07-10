@@ -28,9 +28,6 @@ const ContactInfo = styled.div`
 
   a {
     margin-left: 10px;
-    &:hover {
-      color: #47eb5d;
-    }
   }
 `;
 

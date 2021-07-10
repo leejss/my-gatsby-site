@@ -56,7 +56,7 @@ const Menu: FC = () => {
       <Nav>
         <NavItem>
           <StyledNavlink activeStyle={{ color: "#fa4a4a" }} to="/">
-            HOME
+            SPACE
           </StyledNavlink>
         </NavItem>
         {pages.map((p) => (

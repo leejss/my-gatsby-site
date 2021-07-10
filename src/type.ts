@@ -4,9 +4,16 @@ type URL = string;
 
 export interface IAbout {
   markdownRemark: {
-    excerpt: string;
     frontmatter: {
       title: string;
+      skills: {
+        backend: string[];
+        frontend: string[];
+        language: string[];
+      };
+    };
+    internal: {
+      content: string;
     };
   };
 }

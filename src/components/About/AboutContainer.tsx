@@ -13,9 +13,16 @@ const AboutContainer: FC = () => {
   const data: IAbout = useStaticQuery(graphql`
     query {
       markdownRemark(frontmatter: { category: { eq: "about" } }) {
-        excerpt
         frontmatter {
           title
+          skills {
+            backend
+            frontend
+            language
+          }
+        }
+        internal {
+          content
         }
       }
     }
