@@ -21,9 +21,7 @@ const AboutContainer: FC = () => {
             language
           }
         }
-        internal {
-          content
-        }
+        html
       }
     }
   `);

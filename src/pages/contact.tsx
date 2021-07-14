@@ -5,7 +5,7 @@ import Head from "../components/Head";
 const ContactPage = () => {
   return (
     <section>
-      <Head title={"contact"} />
+      <Head title={"Contact"} />
       <ContactContainer />
     </section>
   );

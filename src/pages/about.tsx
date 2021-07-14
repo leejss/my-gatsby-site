@@ -5,7 +5,7 @@ import Head from "../components/Head";
 const AboutPage = () => {
   return (
     <section>
-      <Head title={"about"} />
+      <Head title={"About"} />
       <AboutContainer />
     </section>
   );

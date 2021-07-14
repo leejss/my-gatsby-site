@@ -8,15 +8,20 @@ import { iconGenerator } from "../../utils/iconGenerator";
 
 const Content = styled.div`
   /* text-align: center; */
+  width: 60%;
   padding: 3rem;
   line-height: 1.5;
   font-weight: ${theme.fontWeights.regular};
+
   h1 {
     font-weight: ${theme.fontWeights.regular};
     font-size: ${theme.fontSizes.mediumLarge};
   }
 
   p {
+    padding-bottom: 5%;
+    margin-bottom: 5%;
+    border-bottom: 1px solid white;
   }
 `;
 
@@ -27,7 +32,7 @@ const Skills = styled.div`
   align-items: flex-start;
   justify-content: center;
   padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.397);
+  background: rgba(255, 255, 255, 0.096);
   div {
   }
 
@@ -51,14 +56,14 @@ type AboutProps = {
 
 const About: FC<AboutProps> = ({ data }) => {
   const title = data.markdownRemark.frontmatter.title;
-  const content = data.markdownRemark.internal.content;
+  const html = data.markdownRemark.html;
   const { backend, frontend, language } =
     data.markdownRemark.frontmatter.skills;
   return (
     <Wrapper opaque fullHeight fullWidth>
       <Content>
         <h1>{title}</h1>
-        <p>{content}</p>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
 
         <Skills>
           <div>

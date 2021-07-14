@@ -5,7 +5,7 @@ import WorksContainer from "../components/Works/WorksContainer";
 const WorksPage = () => {
   return (
     <section>
-      <Head title="works" />
+      <Head title="Works" />
       <WorksContainer />
     </section>
   );

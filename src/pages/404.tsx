@@ -6,7 +6,7 @@ import Wrapper from "../components/Wrapper";
 const NotFound: FC = () => {
   return (
     <>
-      <Head title="Not Found" />
+      <Head title="404" />
       <Wrapper fullHeight fullWidth>
         Page Not Found
       </Wrapper>

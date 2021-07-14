@@ -5,7 +5,7 @@ import Head from "../components/Head";
 const IndexPage = () => {
   return (
     <section>
-      <Head title="Home" />
+      <Head title="thisisleejss" />
       <Home />
     </section>
   );

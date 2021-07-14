@@ -12,9 +12,7 @@ export interface IAbout {
         language: string[];
       };
     };
-    internal: {
-      content: string;
-    };
+    html: string;
   };
 }
 
