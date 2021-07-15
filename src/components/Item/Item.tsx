@@ -49,7 +49,7 @@ const Item: FC<ItemProps> = ({ work }) => {
     <>
       <ItemWrapper>
         <ItemBox>
-          <Img fluid={fluid} fadeIn />
+          <Img fluid={fluid} fadeIn alt={title} />
           <ItemTitle>{title}</ItemTitle>
           <ItemContent>{content}</ItemContent>
           <ItemLink href={repoUrl} target="_blank">

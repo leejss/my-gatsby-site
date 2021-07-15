@@ -2,7 +2,7 @@
 category: "works"
 title: "React Blog"
 keyword: "react-blog"
-thumbnail: "./test2.PNG"
+thumbnail: "./blog.PNG"
 repo: "https://github.com/leejss/react-blog-app"
 ---
 

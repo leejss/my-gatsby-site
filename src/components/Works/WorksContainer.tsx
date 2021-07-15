@@ -12,7 +12,9 @@ const WorksContainer: FC = () => {
   }, []);
   const data: IWorks = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(filter: { frontmatter: { category: { eq: "works" } } }) {
+      allMarkdownRemark(
+        filter: { frontmatter: { category: { eq: "works" } } }
+      ) {
         edges {
           node {
             frontmatter {
@@ -21,7 +23,7 @@ const WorksContainer: FC = () => {
               repo
               thumbnail {
                 childImageSharp {
-                  fluid(maxWidth: 2000, maxHeight: 1000) {
+                  fluid(maxWidth: 2000) {
                     ...GatsbyImageSharpFluid
                   }
                 }
