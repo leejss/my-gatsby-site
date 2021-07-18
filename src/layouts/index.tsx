@@ -1,21 +1,20 @@
-import React, { FC } from "react";
+import React from "react";
 import { ThemeProvider } from "styled-components";
+import Navigation from "../components/Navigation";
+import Particles from "../components/Background/Particles";
 import { GlobalStyle } from "../styles/globalStyles";
 import { theme } from "../styles/theme";
-import Navigation from "../components/Navigation/Navigation";
+import Background from "../components/Background/Background";
 
-const LayoutWrapper: FC = ({ children }) => {
+const Layout: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
+      <Background />
       <GlobalStyle />
-      <main role="main">{children}</main>
+      <main>{children}</main>
       <Navigation />
     </ThemeProvider>
   );
-};
-
-const Layout: FC = ({ children }) => {
-  return <LayoutWrapper>{children}</LayoutWrapper>;
 };
 
 export default Layout;

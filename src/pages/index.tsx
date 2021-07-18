@@ -1,11 +1,10 @@
 import React from "react";
 import Head from "../components/Head";
-import Layout from "../components/Layout";
 import Home from "../components/Home";
 
 const IndexPage: React.FC = () => {
   return (
-    <Layout>
+    <>
       <Head
         title="Home"
         image="/images/main.PNG"
@@ -15,7 +14,7 @@ const IndexPage: React.FC = () => {
       <section>
         <Home />
       </section>
-    </Layout>
+    </>
   );
 };
 

@@ -1,10 +1,9 @@
 import React from "react";
 import Head from "../components/Head";
-import Layout from "../components/Layout";
 
 const NotFoundPage: React.FC = () => {
   return (
-    <Layout>
+    <>
       <Head
         title="404"
         lang="kor"
@@ -13,7 +12,7 @@ const NotFoundPage: React.FC = () => {
       <section>
         <h1>Not Found</h1>
       </section>
-    </Layout>
+    </>
   );
 };
 

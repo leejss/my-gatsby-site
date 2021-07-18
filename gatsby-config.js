@@ -1,7 +1,4 @@
 module.exports = {
-  flags: {
-    FAST_DEV: true,
-  },
   siteMetadata: {
     title: `thisisleejss`,
     author: {
@@ -77,6 +74,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `standalone`,
         icon: `./static/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: "gatsby-plugin-layout",
+      options: {
+        component: require.resolve(`./src/layouts/index.tsx`),
       },
     },
   ],
