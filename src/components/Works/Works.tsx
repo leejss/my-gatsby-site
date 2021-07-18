@@ -1,20 +1,28 @@
 import React from "react";
-import type { FC } from "react";
-import { IWork, IWorks } from "../../type";
-import Item from "../Item/Item";
+import { WorksQueryData } from "../../types";
+import styled from "styled-components";
+import Work from "./Work";
 
 type WorksProps = {
-  data: IWorks;
+  readonly data: WorksQueryData;
 };
 
-const Works: FC<WorksProps> = ({ data }) => {
-  const workList: IWork[] = data.allMarkdownRemark.edges;
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
+
+const Works: React.FC<WorksProps> = ({ data }) => {
+  console.log(data);
+  const edges = data.allMarkdownRemark.edges;
+
   return (
-    <>
-      {workList.map((work: IWork) => {
-        return <Item key={work.node.id} work={work} />;
-      })}
-    </>
+    <Container>
+      {edges.map((edge) => (
+        <Work key={edge.node.id} edge={edge} />
+      ))}
+    </Container>
   );
 };
 

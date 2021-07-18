@@ -1,13 +1,20 @@
 import React from "react";
 import Head from "../components/Head";
-import WorksContainer from "../components/Works/WorksContainer";
+import Layout from "../components/Layout";
+import Works from "../components/Works/";
 
-const WorksPage = () => {
+const WorksPage: React.FC = () => {
   return (
-    <section>
-      <Head title="Works" />
-      <WorksContainer />
-    </section>
+    <Layout>
+      <Head
+        title="Home"
+        lang="kor"
+        keywords={["gatsby", "typescript", "react", "portfolio"]}
+      />
+      <section>
+        <Works />
+      </section>
+    </Layout>
   );
 };
 

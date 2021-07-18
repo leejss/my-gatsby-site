@@ -1,77 +1,72 @@
-import type { FC } from "react";
-import { theme } from "../../styles/theme";
+import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import React from "react";
 
-const MenuWrapper = styled.nav`
+const MenuWrapper = styled.div`
   position: fixed;
-  bottom: 6%;
-  left: 3%;
-  /* transform: translateY(-50%); */
-  width: 10%;
-  display: flex;
-  align-items: flex-end;
-  padding: ${theme.spaces.p200};
-  z-index: 10;
+  bottom: 0;
+  left: 0;
+  // 1rem = 16px
+  padding: 2rem 3rem;
+
+  /* Media Query */
+  ${(props) => props.theme.media.max.md`
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    background: #090f17;
+    right: 0;
+    width: 100%;
+  `}
 `;
 
-const Nav = styled.ul`
+const MenuList = styled.ul`
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  width: 50%;
+  max-width: 14rem;
+
+  /* Media Query */
+  ${(props) => props.theme.media.max.md`
+   display: flex;
+   justify-content: center;
+  `}
 `;
 
-const NavItem = styled.li`
-  padding: 0.5rem 0;
-  line-height: 1em;
-  &:last-child {
-    padding-bottom: 0;
-  }
+const MenuItem = styled.li`
+  padding: 1rem;
+  font-size: ${(props) => props.theme.fontSizes.normal};
+
+  /* Media Query */
+  ${(props) => props.theme.media.max.md`
+    font-size: 0.825rem;
+  `}
 `;
 
-const StyledNavlink = styled(Link)`
-  font-size: ${(props) => props.theme.fontSizes.regular};
-  font-weight: ${(props) => props.theme.fontWeights.thin};
-
-  &:hover {
-    color: ${(props) => props.theme.colors.lightest};
-    font-weight: ${(props) => props.theme.fontWeights.bold};
-  }
-`;
-
-const StyledAnchor = styled.a`
-  font-size: ${(props) => props.theme.fontSizes.medium};
-  font-weight: ${(props) => props.theme.fontWeights.thin};
-
-  &:hover {
-    color: ${(props) => props.theme.colors.lightest};
-    font-weight: ${(props) => props.theme.fontWeights.bold};
-  }
-`;
-const pages = ["about", "works", "contact"];
-const Menu: FC = () => {
+const Menu: React.FC = () => {
+  const pages = ["about", "works"];
   return (
     <MenuWrapper>
-      <Nav>
-        <NavItem>
-          <StyledNavlink activeStyle={{ color: "#fa4a4a" }} to="/">
-            HOME
-          </StyledNavlink>
-        </NavItem>
-        {pages.map((p) => (
-          <NavItem key={p}>
-            <StyledNavlink activeStyle={{ color: "#fa4a4a" }} to={`/${p}`}>
-              {p.toUpperCase()}
-            </StyledNavlink>
-          </NavItem>
+      <MenuList>
+        <MenuItem>
+          <Link to={`/`} activeStyle={{ color: "#47eb5d" }}>
+            INDEX
+          </Link>
+        </MenuItem>
+        {pages.map((page) => (
+          <MenuItem key={page}>
+            <Link to={`/${page}`} activeStyle={{ color: "#47eb5d" }}>
+              {page.toUpperCase()}
+            </Link>
+          </MenuItem>
         ))}
-        <NavItem>
-          <StyledAnchor href="https://leejss.github.io/" target="_blank">
+        <MenuItem>
+          <a href="https://leejss.github.io/" target="_blank" rel="noreferrer">
             POSTS
-          </StyledAnchor>
-        </NavItem>
-      </Nav>
+          </a>
+        </MenuItem>
+      </MenuList>
     </MenuWrapper>
   );
 };

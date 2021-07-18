@@ -1,17 +1,20 @@
-import type { FC } from "react";
 import React from "react";
 import Head from "../components/Head";
-import Wrapper from "../components/Wrapper";
+import Layout from "../components/Layout";
 
-const NotFound: FC = () => {
+const NotFoundPage: React.FC = () => {
   return (
-    <>
-      <Head title="404" />
-      <Wrapper fullHeight fullWidth>
-        Page Not Found
-      </Wrapper>
-    </>
+    <Layout>
+      <Head
+        title="404"
+        lang="kor"
+        keywords={["gatsby", "typescript", "react", "portfolio"]}
+      />
+      <section>
+        <h1>Not Found</h1>
+      </section>
+    </Layout>
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

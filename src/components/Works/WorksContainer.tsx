@@ -1,44 +1,32 @@
-import React, { useEffect } from "react";
-import type { FC } from "react";
-import Works from "./Works";
-import { useMove } from "../../contexts/useMove";
 import { graphql, useStaticQuery } from "gatsby";
-import { IWorks } from "../../type";
+import React from "react";
+import { WorksQueryData } from "../../types";
+import Works from "./Works";
 
-const WorksContainer: FC = () => {
-  const { setMove } = useMove();
-  useEffect(() => {
-    setMove(false);
-  }, []);
-  const data: IWorks = useStaticQuery(graphql`
-    query {
+const WorksContainer: React.FC = () => {
+  const data: WorksQueryData = useStaticQuery(graphql`
+    query WorksQuery {
       allMarkdownRemark(
         filter: { frontmatter: { category: { eq: "works" } } }
       ) {
         edges {
           node {
+            id
+            html
             frontmatter {
-              title
-              keyword
               repo
+              title
               thumbnail {
                 childImageSharp {
-                  fluid(maxWidth: 2000) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(width: 800)
                 }
               }
             }
-            internal {
-              content
-            }
-            id
-          }
+        }
         }
       }
     }
   `);
-
   return <Works data={data} />;
 };
 

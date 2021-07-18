@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import React from "react";
 import styled from "styled-components";
-import { IContactInfo } from "../../type";
+import { IContactInfo } from "../../types";
 import Wrapper from "../Wrapper";
 import { SiGmail } from "react-icons/si";
 import { AiOutlineMail, AiFillGithub } from "react-icons/ai";

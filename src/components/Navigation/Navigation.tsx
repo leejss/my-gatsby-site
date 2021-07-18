@@ -1,12 +1,11 @@
-import type { FC } from "react";
-import Menu from "./Menu";
 import React from "react";
+import Menu from "./Menu";
 
-const Navigation: FC = () => {
+const Navigation: React.FC = () => {
   return (
-    <aside>
+    <nav>
       <Menu />
-    </aside>
+    </nav>
   );
 };
 

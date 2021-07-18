@@ -3,7 +3,7 @@ import React from "react";
 import { useMove } from "../../contexts/useMove";
 import Contact from "./Contact";
 import { graphql, useStaticQuery } from "gatsby";
-import { IContactInfo } from "../../type";
+import { IContactInfo } from "../../types";
 
 const ContactContainer: FC = () => {
   // remove eventListener
