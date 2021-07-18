@@ -1,52 +1,34 @@
-import { FluidObject } from "gatsby-image";
+import { FileNode } from "gatsby-plugin-image/dist/src/components/hooks";
 
-type URL = string;
-
-export interface IAbout {
-  markdownRemark: {
-    frontmatter: {
+// Graphql Query Types
+export interface HeadQueryData {
+  site: {
+    siteMetadata: {
       title: string;
-      skills: {
-        backend: string[];
-        frontend: string[];
-        language: string[];
+      description: string;
+      author: {
+        name: string;
       };
+      siteUrl: string;
+      image: string;
     };
-    html: string;
   };
 }
 
 export interface IWork {
   node: {
-    frontmatter: {
-      title: string;
-      keyword: string;
-      repo: string;
-      thumbnail: {
-        childImageSharp: {
-          fluid: FluidObject;
-        };
-      };
-    };
     id: string;
-    internal: {
-      content: string;
+    html: string;
+    frontmatter: {
+      repo: string;
+      thumbnail: FileNode;
+      title: string;
     };
   };
 }
 
-export interface IWorks {
+export interface WorksQueryData {
   allMarkdownRemark: {
     edges: IWork[];
-  };
-}
-
-export interface IContactInfo {
-  markdownRemark: {
-    frontmatter: {
-      github: URL;
-      naver: URL;
-      gmail: URL;
-    };
   };
 }
