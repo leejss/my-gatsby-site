@@ -2,15 +2,11 @@ import React, { FC } from "react";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "../styles/globalStyles";
 import { theme } from "../styles/theme";
-import Particles from "../components/Particles";
 import Navigation from "../components/Navigation/Navigation";
-import { MoveProvider, useMove } from "../contexts/useMove";
 
-const LayoutBody: FC = ({ children }) => {
-  const { move } = useMove();
+const LayoutWrapper: FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
-      <Particles move={move} />
       <GlobalStyle />
       <main role="main">{children}</main>
       <Navigation />
@@ -19,11 +15,7 @@ const LayoutBody: FC = ({ children }) => {
 };
 
 const Layout: FC = ({ children }) => {
-  return (
-    <MoveProvider>
-      <LayoutBody>{children}</LayoutBody>
-    </MoveProvider>
-  );
+  return <LayoutWrapper>{children}</LayoutWrapper>;
 };
 
 export default Layout;
