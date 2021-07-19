@@ -32,3 +32,14 @@ export interface WorksQueryData {
     edges: IWork[];
   };
 }
+
+export interface ContactQueryData {
+  site: {
+    siteMetadata: {
+      author: {
+        github: string;
+        email: string;
+      };
+    };
+  };
+}

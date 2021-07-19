@@ -45,7 +45,7 @@ const MenuItem = styled.li`
 `;
 
 const Menu: React.FC = () => {
-  const pages = ["about", "works"];
+  const pages = ["about", "works", "contact"];
   return (
     <MenuWrapper>
       <MenuList>

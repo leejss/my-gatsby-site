@@ -1,9 +1,14 @@
 import { graphql, useStaticQuery } from "gatsby";
-import React from "react";
+import React, { useEffect } from "react";
+import { useMove } from "../../contexts/useMove";
 import { WorksQueryData } from "../../types";
 import Works from "./Works";
 
 const WorksContainer: React.FC = () => {
+  const { setMove } = useMove();
+  useEffect(() => {
+    setMove(false);
+  }, []);
   const data: WorksQueryData = useStaticQuery(graphql`
     query WorksQuery {
       allMarkdownRemark(
@@ -22,7 +27,7 @@ const WorksContainer: React.FC = () => {
                 }
               }
             }
-        }
+          }
         }
       }
     }

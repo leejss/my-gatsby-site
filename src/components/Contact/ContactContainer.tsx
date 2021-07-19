@@ -1,23 +1,22 @@
-import { FC, useEffect } from "react";
-import React from "react";
-import { useMove } from "../../contexts/useMove";
-import Contact from "./Contact";
 import { graphql, useStaticQuery } from "gatsby";
-import { IContactInfo } from "../../types";
+import React, { useEffect } from "react";
+import { useMove } from "../../contexts/useMove";
+import { ContactQueryData } from "../../types";
+import Contact from "./Contact";
 
-const ContactContainer: FC = () => {
-  // remove eventListener
+const ContactContainer: React.FC = () => {
   const { setMove } = useMove();
   useEffect(() => {
     setMove(false);
   }, []);
-  const data: IContactInfo = useStaticQuery(graphql`
-    query {
-      markdownRemark(frontmatter: { category: { eq: "contact" } }) {
-        frontmatter {
-          github
-          naver
-          gmail
+  const data: ContactQueryData = useStaticQuery(graphql`
+    query ContactQuery {
+      site {
+        siteMetadata {
+          author {
+            github
+            email
+          }
         }
       }
     }

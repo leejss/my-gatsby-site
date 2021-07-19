@@ -1,59 +1,41 @@
-import type { FC } from "react";
 import React from "react";
 import styled from "styled-components";
-import { IContactInfo } from "../../types";
-import Wrapper from "../Wrapper";
+import { Centered } from "../../styles/Common";
+import { ContactQueryData } from "../../types";
 import { SiGmail } from "react-icons/si";
-import { AiOutlineMail, AiFillGithub } from "react-icons/ai";
-import { theme } from "../../styles/theme";
-
+import { AiFillGithub } from "react-icons/ai";
 type ContactProps = {
-  data: IContactInfo;
+  data: ContactQueryData;
 };
 
 const ContactWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-`;
+  ul > li {
+    margin: 10px;
+  }
 
-const ContactInfo = styled.div`
-  line-height: 1.5;
-  margin-bottom: 1%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: ${theme.fontSizes.medium};
-
-  a {
+  ul > li > a {
     margin-left: 10px;
   }
 `;
 
-const Contact: FC<ContactProps> = ({ data }) => {
-  const naver = data.markdownRemark.frontmatter.naver;
-  const github = data.markdownRemark.frontmatter.github;
-  const gmail = data.markdownRemark.frontmatter.gmail;
+const Contact: React.FC<ContactProps> = ({ data }) => {
+  const email = data.site.siteMetadata.author.email;
+  const github = data.site.siteMetadata.author.github;
   return (
-    <Wrapper opaque fullHeight fullWidth>
+    <Centered>
       <ContactWrapper>
-        <ContactInfo>
-          <SiGmail />
-          <a href={`mailto:${gmail}`}>{gmail}</a>
-        </ContactInfo>
-        <ContactInfo>
-          <AiOutlineMail />
-          <a href={`mailto:${naver}`}>{naver}</a>
-        </ContactInfo>
-        <ContactInfo>
-          <AiFillGithub />
-          <a href={github} target="_blank" rel="noreferrer">
-            {github}
-          </a>
-        </ContactInfo>
+        <ul>
+          <li>
+            <SiGmail />
+            <a href={email}>{email}</a>
+          </li>
+          <li>
+            <AiFillGithub />
+            <a href={github}>{github}</a>
+          </li>
+        </ul>
       </ContactWrapper>
-    </Wrapper>
+    </Centered>
   );
 };
 

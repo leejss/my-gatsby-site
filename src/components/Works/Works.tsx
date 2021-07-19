@@ -12,9 +12,7 @@ const Container = styled.div`
   flex-wrap: wrap;
 `;
 
-
 const Works: React.FC<WorksProps> = ({ data }) => {
-  console.log(data);
   const edges = data.allMarkdownRemark.edges;
 
   return (

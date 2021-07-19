@@ -4,7 +4,7 @@ module.exports = {
     author: {
       name: `Lee Jongseo`,
       email: "goldemshine@gmail.com",
-      url: "https://leejss.github.io/",
+      github: "https://github.com/leejss",
     },
     description: `leejss's portfolio`,
     siteUrl: `https://thisisleejss.com/`,

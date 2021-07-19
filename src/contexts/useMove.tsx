@@ -15,10 +15,6 @@ const defaultContext = {
 const moveContext = createContext<contextType>(defaultContext);
 
 export const MoveProvider: FC = ({ children }) => {
-  // const moveRef = useRef(true);
-  // const setMove = (flag: boolean) => {
-  //   moveRef.current = flag;
-  // };
   const [move, setMove] = useState<boolean>(true);
   const value = {
     move,
