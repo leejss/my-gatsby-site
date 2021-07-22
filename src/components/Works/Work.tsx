@@ -1,5 +1,5 @@
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import { IWork } from "../../types";
 
@@ -42,10 +42,11 @@ const Work: React.FC<WorkProps> = ({ edge }) => {
   const title = edge.node.frontmatter.title;
   const html = edge.node.html;
   const repo = edge.node.frontmatter.repo;
+  const image = getImage(thumbnail);
 
   return (
     <WorkWrapper>
-      <GatsbyImage image={getImage(thumbnail)!} alt={title} />
+      {image && <GatsbyImage image={image} alt={title} />}
       <h3 className="work__title">
         <a href={repo}>{title} - Github 저장소 바로가기</a>
       </h3>

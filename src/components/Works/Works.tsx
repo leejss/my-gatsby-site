@@ -1,4 +1,4 @@
-import React, { MouseEvent, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { WorksQueryData } from "../../types";
 import styled from "styled-components";
 import Work from "./Work";
@@ -21,7 +21,7 @@ const Works: React.FC<WorksProps> = ({ data }) => {
   function moveTo(
     index: number
   ): React.MouseEventHandler<HTMLDivElement> | undefined {
-    return function (e: MouseEvent<HTMLDivElement>) {
+    return function () {
       if (screensRef.current) {
         Array.from(screensRef.current.children)[index].scrollIntoView({
           behavior: "smooth",
