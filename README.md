@@ -1,54 +1,40 @@
+<!-- Logo (with link) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  <a href="https://github.com/leejss/my-gatsby-site">
+    <img alt="gatsby-personal-site" src="./static/images/favicon.png" width="100" />
   </a>
 </p>
+
+<!-- Title -->
 <h1 align="center">
-  Gatsby minimal starter
+  My Gatsby Site
 </h1>
 
-## 🚀 Quick start
+<!-- Badges (with link) -->
 
-1.  **Create a Gatsby site.**
+<!-- <p align="center">
+  <a href="https://github.com/reymon359/gatsby-personal-site/actions?query=workflow%3ABuild">
+    <img alt="Build" src="https://github.com/reymon359/gatsby-personal-site/workflows/Build/badge.svg" />
+  </a>
+  <a href="https://github.com/reymon359/gatsby-personal-site/commits/master">
+    <img alt="Last commit" src="https://img.shields.io/github/last-commit/reymon359/gatsby-personal-site?logo=github" />
+  </a>
+  <a href="https://github.com/reymon359/gatsby-personal-site/blob/master/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/github/license/reymon359/gatsby-personal-site?color=blue&logo=github" />
+  </a>
+  <a href="https://github.com/reymon359/gatsby-personal-site/releases">
+    <img alt="Version" src="https://img.shields.io/github/package-json/v/reymon359/gatsby-personal-site?logo=github" />
+  </a>
+</p> -->
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+<!-- Small description -->
+<p align="center">
+A personal site made with the static site generator <a href="https://www.gatsbyjs.com/">Gatsby</a>
+</p>
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+<!-- Screenshot or video (with link) -->
+<p align="center">
+  <a href="https://thisisleejss.com/">
+    <img alt="site screenshot" src="./static/images/demo.gif" />
+  </a>
+</p>

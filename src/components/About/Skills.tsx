@@ -8,6 +8,12 @@ const SkillsWrapper = styled.div`
   margin-top: 15px;
   background-color: rgba(255, 255, 255, 0.094);
   padding: 10px;
+  display: flex;
+  justify-content: space-around;
+
+  div {
+    text-align: center;
+  }
 
   ${(props) => props.theme.media.max.sm`
     width: 100%;
