@@ -9,6 +9,7 @@ const WorksContainer: React.FC = () => {
   useEffect(() => {
     setMove(false);
   }, []);
+
   const data: WorksQueryData = useStaticQuery(graphql`
     query WorksQuery {
       allMarkdownRemark(
