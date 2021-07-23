@@ -30,23 +30,23 @@ const Works: React.FC<WorksProps> = ({ data }) => {
     };
   }
 
-  // Observer
-  const scrollOberser = new IntersectionObserver(
-    (entries) => {
-      const { target } = entries.find((entry) => entry.isIntersecting) || {};
-      // view index 설정
-      if (target && screensRef.current) {
-        const index = Array.from(screensRef.current.children).indexOf(target);
-        setViewIndex(index);
-      }
-    },
-    {
-      root: null,
-      threshold: 0.5,
-    }
-  );
-
   useEffect(() => {
+    // Observer
+    const scrollOberser = new IntersectionObserver(
+      (entries) => {
+        const { target } = entries.find((entry) => entry.isIntersecting) || {};
+        // view index 설정
+        if (target && screensRef.current) {
+          const index = Array.from(screensRef.current.children).indexOf(target);
+          setViewIndex(index);
+        }
+      },
+      {
+        root: null,
+        threshold: 0.5,
+      }
+    );
+    
     if (screensRef.current) {
       Array.from(screensRef.current.children).forEach((item) => {
         scrollOberser.observe(item);
