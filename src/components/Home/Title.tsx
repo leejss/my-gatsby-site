@@ -7,12 +7,12 @@ type TitleProps = {
 
 const TitleWrapper = styled.header`
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   z-index: 1;
 

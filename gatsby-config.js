@@ -45,12 +45,6 @@ module.exports = {
               maxWidth: 630,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
         ],
       },
     },
