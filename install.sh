@@ -1,1 +1,0 @@
-npm i -D @types/node @types/react @types/react-dom @types/react-helmet @types/styled-components @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-plugin-react eslint-plugin-react-hooks typescript
