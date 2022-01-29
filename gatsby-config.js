@@ -6,7 +6,7 @@ module.exports = {
       email: "goldemshine@gmail.com",
       github: "https://github.com/leejss",
     },
-    description: `leejss's portfolio`,
+    description: `leejss's site`,
     siteUrl: `https://thisisleejss.com/`,
     social: [{ name: "Github", socialUrl: "https://github.com/leejss" }],
   },
@@ -17,7 +17,6 @@ module.exports = {
     "gatsby-plugin-sitemap",
     "gatsby-transformer-remark",
     "gatsby-transformer-sharp",
-    "gatsby-plugin-typescript",
     `gatsby-plugin-sharp`,
     {
       resolve: "gatsby-source-filesystem",
@@ -46,15 +45,6 @@ module.exports = {
               maxWidth: 630,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
-          `gatsby-remark-prismjs`,
-          `gatsby-remark-copy-linked-files`,
-          `gatsby-remark-smartypants`,
         ],
       },
     },
