@@ -15,7 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "@react-three/fiber": "^8.0.0-beta-05",
+    "@react-three/fiber": "^7",
     "babel-plugin-styled-components": "^2.0.2",
     "gatsby": "^4.6.0",
     "gatsby-plugin-canonical-urls": "^4.6.0",
